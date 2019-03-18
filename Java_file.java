@@ -12,15 +12,6 @@ public class ErrorTests {
         this.str = str;
         this.testInt = testInteger;
     }
-    
-    public class ErrorTests {
-    private String str;
-    private final int testInt;
-
-    public ErrorTests(String str, int testInteger){
-        this.str = str;
-        this.testInt = testInteger;
-    }
 
     public void testMethod(){
         Runtime runtime = Runtime.getRuntime();
@@ -51,9 +42,7 @@ public class ErrorTests {
         }
 
     }
-
-
-    public void testMethod(){
+public void testMethod(){
         Runtime runtime = Runtime.getRuntime();
 
         System.out.println(str);
@@ -82,7 +71,6 @@ public class ErrorTests {
         }
 
     }
-
     public void testMethod1(){
         System.out.println(str);
         if (str.startsWith("test") == true) {
