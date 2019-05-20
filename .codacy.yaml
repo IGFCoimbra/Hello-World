@@ -1,0 +1,4 @@
+---
+engines:
+ scalaStyle:
+   enabled: false
