@@ -18,12 +18,12 @@ class Testing {
   }
 }
 
-case class test(
+case class Test(
                  id: String = "",
                  Type: String = "",
                  issue_id: String = "",
                  issue_type: String = "",
                  recipient_id: String = "",
                  recipient_type: String = ""
-)
+                )
 
