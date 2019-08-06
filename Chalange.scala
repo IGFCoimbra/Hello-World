@@ -26,4 +26,4 @@ case class test(
                  issue_type: String = "",
                  recipient_id: String = "",
                  recipient_type: String = ""
-        
+)        
