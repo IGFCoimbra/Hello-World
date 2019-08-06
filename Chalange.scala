@@ -20,4 +20,3 @@ case class Test(
  
  val format = Json.format[Transaction]
  val data_format = Jsonx.formatCaseClass[TransactionData]
-}
