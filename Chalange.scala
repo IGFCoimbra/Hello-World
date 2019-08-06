@@ -14,7 +14,6 @@ class Testing {
     
     def isGoodEnough(guess: Double, x: Double) =
       abs(square(guess) - x) < 0.001
-    
     sqrtIter(1.0, x)
   }
 }
@@ -26,4 +25,5 @@ case class test(
                  issue_type: String = "",
                  recipient_id: String = "",
                  recipient_type: String = ""
-)        
+)
+
