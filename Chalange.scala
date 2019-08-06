@@ -14,3 +14,14 @@ def sqrt(x: Double) = {
 
   sqrtIter(1.0, x)
 }
+
+case class Test(
+  id:              String                = "",
+  Type:      Option[ZonedDateTime] = None,
+  issue_id:       String                = "",
+  issue_type:     String                = "",
+  recipient_id:    String                = "",
+  recipient_type:  String                = "",
+  comment:         Option[String]        = None,
+  tag:             Option[String]        = None
+)
