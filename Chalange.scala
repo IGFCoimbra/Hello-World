@@ -1,6 +1,6 @@
 package Test
 
-class Testing {
+class testing {
   val a = 1;
   var b = 2;
 
