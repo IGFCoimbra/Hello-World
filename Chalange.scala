@@ -17,11 +17,10 @@ def sqrt(x: Double) = {
 
 case class Test(
   id:              String                = "",
-  Type:      Option[ZonedDateTime] = None,
-  issue_id:       String                = "",
-  issue_type:     String                = "",
+  Type:            String                = "",
+  issue_id:        String                = "",
+  issue_type:      String                = "",
   recipient_id:    String                = "",
-  recipient_type:  String                = "",
-  comment:         Option[String]        = None,
-  tag:             Option[String]        = None
+  recipient_type:  String                = ""
+
 )
