@@ -1,3 +1,6 @@
+val format = Json.format[Transaction]
+val data_format = Jsonx.formatCaseClass[TransactionData]
+
 def sqrt(x: Double) = {
   def sqrtIter(guess: Double, x: Double): Double =
     if (isGoodEnough(guess, x)) guess
