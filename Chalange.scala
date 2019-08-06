@@ -4,8 +4,6 @@ class Testing {
   val a = 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111;
   var b = 2;
 
-  var b = 2;
-  
   def sqrt(x: Double) = {
     def sqrtIter(guess: Double, x: Double): Double =
       if (isGoodEnough(guess, x)) guess
