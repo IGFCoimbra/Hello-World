@@ -1,13 +1,13 @@
 package Test
-
-class testing {
+​
+class Testing {
   val a = 1;
   var b = 2;
 
   def sqrt(x: Double) = {
-    def sqrtIter(guess: Double, x: Double): Double =
-      if (isGoodEnough(guess, x)) guess
-      else sqrtIter(improve(guess, x), x)
+    def sqrtIter(guess: Double, x: Double): Double = if (isGoodEnough(guess, x)) guess
+      
+                                                      else sqrtIter(improve(guess, x), x)
 
     def improve(guess: Double, x: Double) =
       (guess + x / guess) / 2
@@ -18,7 +18,7 @@ class testing {
     sqrtIter(1.0, x)
   }
 }
-
+​
 case class Test(
                  id: String = "",
                  Type: String = "",
