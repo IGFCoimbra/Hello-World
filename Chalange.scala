@@ -1,5 +1,5 @@
-val format = Json.format[Transaction]
-val data_format = Jsonx.formatCaseClass[TransactionData]
+val a=1;
+var b=2;
 
 def sqrt(x: Double) = {
   def sqrtIter(guess: Double, x: Double): Double =
