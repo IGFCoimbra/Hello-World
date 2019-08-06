@@ -1,23 +1,3 @@
-package models
-
-import java.time.ZonedDateTime
-import utils.NumberUtils
-import utils.i18n.m.ContextMInfo
-
-import scala.concurrent.{ ExecutionContext, Future }
-
-case class Test(
-  id:              String                = "",
-  Type:      Option[ZonedDateTime] = None,
-  issue_id:       String                = "",
-  issue_type:     String                = "",
-  recipient_id:    String                = "",
-  recipient_type:  String                = "",
-  comment:         Option[String]        = None,
-  tag:             Option[String]        = None
-)
-
- 
 object TransactionTransformation extends DateTransformation {
 
   def api2transaction(transaction_api: TransactionApi): Transaction = {
@@ -46,8 +26,22 @@ object TransactionTransformation extends DateTransformation {
     )
   }
 
-  
+  private[this] def api2transaction_list(transaction_api_list: List[TransactionApi]): List[Transaction] = transaction_api_list.map(api2transaction)
+  private[this] def api2transaction_data_ps(transaction_data_api_ps: PaginatedSequence[TransactionDataApi]): PaginatedSequence[TransactionData] = PaginatedSequence[TransactionData](transaction_data_api_ps.total_size, transaction_data_api_ps.data.map(api2transactionData))
+  private[this] def api2transaction_ps(transaction_api_ps: PaginatedSequence[TransactionApi]): PaginatedSequence[Transaction] = PaginatedSequence[Transaction](transaction_api_ps.total_size, transaction_api_ps.data.map(api2transaction))
+
+  implicit def converterTransactionFromApi(entry: Future[Either[ErrorResult, TransactionApi]])(implicit lang: Lang, executionCtx: ExecutionContext, ctx_credentials: ContextCredentials, ctx_m_info: ContextMInfo): Future[Either[Fail, Transaction]] =
+    EntityConverter.converterFromApi[TransactionApi, Transaction](entry)(lang, executionCtx, ctx_m_info, api2transaction)
+
+  implicit def converterTransactionListFromApi(entry: Future[Either[ErrorResult, List[TransactionApi]]])(implicit lang: Lang, executionCtx: ExecutionContext, ctx_credentials: ContextCredentials, ctx_m_info: ContextMInfo): Future[Either[Fail, List[Transaction]]] =
+    EntityConverter.converterFromApi[List[TransactionApi], List[Transaction]](entry)(lang, executionCtx, ctx_m_info, api2transaction_list)
+
+  implicit def converterTransactionFromPSApi(entry: Future[Either[ErrorResult, PaginatedSequence[TransactionApi]]])(implicit lang: Lang, executionCtx: ExecutionContext, ctx_credentials: ContextCredentials, ctx_m_info: ContextMInfo): Future[Either[Fail, PaginatedSequence[Transaction]]] =
+    EntityConverter.converterFromApi[PaginatedSequence[TransactionApi], PaginatedSequence[Transaction]](entry)(lang, executionCtx, ctx_m_info, api2transaction_ps)
+
+  implicit def converterTransactionDataFromPSApi(entry: Future[Either[ErrorResult, PaginatedSequence[TransactionDataApi]]])(implicit lang: Lang, executionCtx: ExecutionContext, ctx_credentials: ContextCredentials, ctx_m_info: ContextMInfo): Future[Either[Fail, PaginatedSequence[TransactionData]]] =
+    EntityConverter.converterFromApi[PaginatedSequence[TransactionDataApi], PaginatedSequence[TransactionData]](entry)(lang, executionCtx, ctx_m_info, api2transaction_data_ps)
+
   lazy val format = Json.format[Transaction]
   lazy val data_format = Jsonx.formatCaseClass[TransactionData]
 }
- val data_format = Jsonx.formatCaseClass[TransactionData]
