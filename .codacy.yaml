@@ -10,7 +10,7 @@ engines:
   duplication:
     exclude_paths:
       - '**/pb_defs/**'
-  complexity:
+  metric:
     exclude_paths:
       - '**/test_*.py'
       - 'customer_parsers/sundance/scripts/*'
