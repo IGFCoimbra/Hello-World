@@ -1,0 +1,20 @@
+---
+engines:
+  pylint:
+    enabled: true
+    # According to https://support.codacy.com/hc/en-us/articles/115002330985-Specifying-your-Python-version,
+    # valid values are 2 or 3
+    python_version: 3
+    exclude_paths:
+      - '**/pb_defs/**'
+  duplication:
+    exclude_paths:
+      - '**/pb_defs/**'
+  complexity:
+    exclude_paths:
+      - '**/test_*.py'
+      - 'customer_parsers/sundance/scripts/**'
+# https://support.codacy.com/hc/en-us/articles/115002130625-Codacy-Configuration-File
+# Uses Java glob syntax to exclude files.
+exclude_paths:
+  - 'tests/bigquery/snapshots/**'
