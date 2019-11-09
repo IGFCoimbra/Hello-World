@@ -6,6 +6,10 @@ type TransferTx struct {
 	Transactions []Tx `json:"transactions"`
 }
 
+type TransferTx struct {
+	Transactions []Tx `json:"transactions"`
+}
+
 type Tx struct {
 	ID string `json:"id"`
 }
