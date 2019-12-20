@@ -15,7 +15,7 @@ class documents extends resource_controller {
         if (!$this->helper_model->is_development_or_testing()) {
             $this->response_not_implemented();
         }
-//        $entities = $this->model->get_index($matter_id);
+//        $entities = $this->model->get_index($matter_id) ;
         $entities = $this->model->get_index('delete me');
         $this->check_valid_output_format($entities, self::REQUEST_TYPE_GET_INDEX);
         $this->response($entities);
