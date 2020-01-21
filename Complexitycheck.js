@@ -1,14 +1,14 @@
 export default (a, b, c, d) => {
-  if (a === 'bla') {
+  if (a === "bla") {
     switch (b) {
       case 1:
-        return c === 'hello' ? 1 : 2;
+        return c === "hello" ? 1 : 2;
       case 2:
         return e => {
           if (e === 12) {
-            return 'blabla';
+            return "blabla";
           }
-          return 'ahoi';
+          return "ahoi";
         };
       default:
     }
