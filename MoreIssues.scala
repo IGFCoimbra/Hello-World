@@ -1,7 +1,7 @@
-var a=1;
-var b=2;
-var q=1;
-var w=2;
-var e=1;
-var r=2;
-var t=1;
+val a=1;
+val b=2;
+val q=1;
+val w=2;
+val e=1;
+val r=2;
+val t=1;
