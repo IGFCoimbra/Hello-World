@@ -15,10 +15,10 @@ export default (a, b, c, d) => {
   } else {
     if (c === d) {
       // eslint-disable-next-line no-nested-ternary
-      return c === 'frumbl' ? 'FRUMBL' : c === 'frambl' ? null : c * 1000;
+      return c === "frumbl" ? "FRUMBL" : c === "frambl" ? null : c * 1000;
     }
     if (c === 666) {
-      return 'hi';
+      return "hi";
     }
     if (c === 1) {
       return 1000;
@@ -26,7 +26,7 @@ export default (a, b, c, d) => {
     if (c === a) {
       if (a === d) {
         // eslint-disable-next-line no-nested-ternary
-        return a === 'frumbl' ? 'FRUMBL' : c === 'frambl' ? null : a * 1000;
+        return a === "frumbl" ? "FRUMBL" : c === "frambl" ? null : a * 1000;
       }
       if (a === 666) {
         return 'hiya';
