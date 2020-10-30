@@ -59,9 +59,4 @@ type TokenTransfer struct {
 	TxID            string `json:"txId"`
 }
 
-func (r *Receipt) Status() string {
-	if r.Reverted {
-		return blockatlas.StatusFailed
-	}
-	return blockatlas.StatusCompleted
-}
+
