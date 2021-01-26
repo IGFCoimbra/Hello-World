@@ -58,3 +58,12 @@ type TokenTransfer struct {
 	Timestamp       int64  `json:"timestamp"`
 	TxID            string `json:"txId"`
 }
+type TokenTransfer struct {
+	Amount          string `json:"amount"`
+	Block           uint64 `json:"block"`
+	ContractAddress string `json:"contractAddress"`
+	Origin          string `json:"origin"`
+	Receiver        string `json:"receiver"`
+	Timestamp       int64  `json:"timestamp"`
+	TxID            string `json:"txId"`
+}
