@@ -18,3 +18,4 @@ engines:
 # Uses Java glob syntax to exclude files.
 exclude_paths:
   - 'IgnoredFiles/**'
+  - 'JavaScript.js'
