@@ -1124,3 +1124,4 @@ void GeometryReferenceBuilder::CheckFaceInFaceGroups(CC5Face* pFace, CC5Face* as
         if (bFaceMatched == true) break;
     }
 }
+sfgsrgrsg
