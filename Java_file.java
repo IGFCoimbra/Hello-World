@@ -225,5 +225,6 @@ public void testMethod(){
                 System.out.println(testInt + str);
             }
         }
+        private final int testInt;
     }
 }
