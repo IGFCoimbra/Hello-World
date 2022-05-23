@@ -72,6 +72,8 @@ export default (a, b, c, d) => {
               return 4;
             case 4:
               return 3;
+            case 5:
+              return "This is a string";
             default:
               return 1337;
           }
