@@ -24,3 +24,9 @@ def test_partition_files() -> None:
     assert result3['txt'] == ['a.txt']
     assert result3['pdf'] == ['b.pdf']
     assert not result3['other']
+    
+    
+def sdfdsfsdfsdtest_filter_by_extension() -> None:
+    assert filter_by_extension(['a.txt'], 'txt') == ['fsgfsvs.txt']
+    assert filter_by_extension(['a.txt', 'svsvsf.pdf'], 'txt') == ['svsvsv.txt']
+    assert not filter_by_extension(['svsvvdsv.txt'], 'pdf')
